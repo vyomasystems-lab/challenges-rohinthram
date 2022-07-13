@@ -23,4 +23,12 @@ async def test_seq_bug1(dut):
     dut.reset.value = 0
     await FallingEdge(dut.clk)
 
+    inp = [1,0,1,1]
+    out = [0,0,0,1]
+    for i in range(len(inp)):
+        dut.inp_bit.value = inp[i]
+        await FallingEdge(dut.clk)
+
+        assert dut.seq_seen == out[i], f"Incorrect Operation\nExpected : {out[i]} \t Got: {dut.seq_seen.value}"
+
     cocotb.log.info('#### CTB: Develop your test here! ######')
