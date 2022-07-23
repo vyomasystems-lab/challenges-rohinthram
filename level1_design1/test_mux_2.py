@@ -5,7 +5,7 @@ from cocotb.triggers import Timer
 import random
 
 @cocotb.test()
-async def test_mux_2(dut):
+async def test_mux_1(dut):
     """Test for mux2"""
     #cocotb.log.info('##### CTB: Develop your test here ########')
     
@@ -24,4 +24,13 @@ async def test_mux_2(dut):
         print(i, eval(f'dut.inp{i}.value'), dut.out.value)
         
         assert int(dut.out.value) == inp[i], "Incorrect Operation"
+    
+@cocotb.test()
+async def test_mux_2(dut):
+    dut.inp30.value = 2
+    dut.sel.value = 30
+    await Timer(10, units='ns')
+    print(f'{dut.inp30.value}', dut.out.value)
+        
+    assert int(dut.out.value) == int(dut.inp30.value), "Incorrect Operation"
     
