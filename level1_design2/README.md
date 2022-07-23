@@ -1,2 +1,2 @@
-# Multiplexer Design Verification
+# Sequence Detector Design Verification
 

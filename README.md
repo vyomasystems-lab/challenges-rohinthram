@@ -19,9 +19,9 @@ A sample CoCoTb file is as shown
 
 The verification and bug details for the designs are provided in the respective directories as README.md file
 - [MUX](/level1_design1/README.md)
-- Sequence Detector
-- Bit Manipulation Co-processor
-- Gray to Binary Code Converter using FSM
+- [Sequence Detector](/level1_design2/README.md)
+- [Bit Manipulation Co-processor](/level2_design/README.md)
+- [Gray to Binary Code Converter using FSM](/level3_design/README.md)
 
 ---
 

@@ -1,2 +1,2 @@
-# Multiplexer Design Verification
+# Bit Manipulator Co-processor Design Verification
 
