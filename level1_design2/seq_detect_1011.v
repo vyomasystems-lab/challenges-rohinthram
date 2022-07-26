@@ -69,6 +69,5 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         next_state = IDLE;
       end
     endcase
-    $monitor(current_state, next_state);
   end
 endmodule

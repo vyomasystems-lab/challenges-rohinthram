@@ -50,6 +50,7 @@ async def test_seq_bug2(dut):
         dut._log.info(f'Correct : {out[i]} \t From DUT: {dut.seq_seen.value}')
         assert dut.seq_seen == out[i], f"Incorrect Operation\nExpected : {out[i]} \t Got: {dut.seq_seen.value}"
 
+
 @cocotb.test()
 async def test_seq_bug3(dut):
     clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
@@ -68,3 +69,4 @@ async def test_seq_bug3(dut):
         await FallingEdge(dut.clk)
         dut._log.info(f'Correct : {out[i]} \t From DUT: {dut.seq_seen.value}')
         assert dut.seq_seen == out[i], f"Incorrect Operation\nExpected : {out[i]} \t Got: {dut.seq_seen.value}"
+        
