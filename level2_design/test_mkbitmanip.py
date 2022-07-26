@@ -34,13 +34,13 @@ def run_test(dut):
 
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
-    mav_putvalue_src1 = 0x4
-    mav_putvalue_src2 = 0xee
-    mav_putvalue_src3 = 0xa
+    mav_putvalue_src1 = 0x1
+    mav_putvalue_src2 = 0xe
+    mav_putvalue_src3 = 0x1
 
-    
+    insts = [int('', base=2)]
     #for mav_putvalue_instr in [0x101010B3]:
-    for mav_putvalue_instr in range(1):
+    for mav_putvalue_instr in insts:
         # expected output from the model
         expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
 
@@ -58,9 +58,8 @@ def run_test(dut):
 
         cocotb.log.info(f'DUT OUTPUT={hex(dut_output)}')
         cocotb.log.info(f'EXPECTED OUTPUT={hex(expected_mav_putvalue)}')
-
+        
         # comparison
         error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = {hex(expected_mav_putvalue)}'
         #assert dut_output == expected_mav_putvalue, error_message
-
         

@@ -1,29 +1,30 @@
 # See LICENSE.vyoma for details
 
 import cocotb
-from cocotb.triggers import Timer
+from cocotb.Clock import Clock
+from cocotb.triggers import RisingEdge
 
 @cocotb.test()
 async def test_mux(dut):
-    """Test for mux2"""
-    #cocotb.log.info('##### CTB: Develop your test here ########')
-    
+    clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
+    cocotb.start_soon(clock.start())        # Start the clock
+
+    # reset
+    dut.reset.value = 1
+    await RisingEdge(dut.clk)  
+    dut.reset.value = 0
+    await RisingEdge(dut.clk)
+
     #setting different input values
-    inp = [0]*31
-    inp[1] = 2
-    inp[6] = 2
-    inp[17] = 1
-    inp[20] = 1
-    inp[30] = 3
+    inp = [1,1,1,1,1,1]
+    out = [0,0,0,0,1,0,1,0,1]
+
+
+    for i in range(len(inp)):
+        dut.inp_bit.value = inp[i]
+        await RisingEdge(dut.clk)
+        
+        dut._log.info(f'Correct : {out[i]} \t From DUT: {dut.seq_seen.value}')
+        #assert dut.seq_seen == out[i], f"Incorrect Operation\nExpected : {out[i]} \t Got: {dut.seq_seen.value}"
     
-
-    for i in range(len(inp)):
-        exec(f'dut.inp{i}.value = {inp[i]}')
-
-    #for a given input, changing the select line and verifying the correctness
-    for i in range(len(inp)):
-        dut.sel.value = i
-        await Timer(2, units='ns')
-
-        assert dut.out.value == inp[i], "Incorrect Operation"
     
