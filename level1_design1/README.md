@@ -53,3 +53,6 @@ The updated design is checked in as mux_corrected.v
 
 ## Verification Strategy
  Verify all possible select lines keep the input to the input lines (0 to 30) fixed.
+
+## Is the verification complete ?
+ Verification is complete, this is a simple design where nearly all possible test cases were able to be simulated. But there may be certain edge cases that may fail.
