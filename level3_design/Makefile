@@ -4,7 +4,7 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/main.v               # provide your design path
+VERILOG_SOURCES = $(PWD)/main_corrected.v
 
 TOPLEVEL := main          # design file
 MODULE   := test_code_cnvt_fsm    # test file
