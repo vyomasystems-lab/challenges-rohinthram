@@ -35,6 +35,8 @@ We can log the output from the DUT using `dut._log.info()`
 
 Output mismatches for the above inputs proving that there is a design bug
 
+![](../assets/mux_fail.png)
+
 ## Bug
 Based on the above test input and analysing the design, we see the following
 
