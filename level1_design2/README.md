@@ -55,7 +55,7 @@ out = [0,0,0,0,0,0,0,1]
 
 Output mismatches for the above inputs showing that there is a design bug
 
-![](../assets/seq_detect_fail.png.png)
+![](../assets/seq_detect_fail.png)
 
 ## Bug
 Based on the above test input and analysing the design, we see the following
