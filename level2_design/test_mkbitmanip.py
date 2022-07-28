@@ -34,11 +34,19 @@ def run_test(dut):
 
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
-    mav_putvalue_src1 = 0x1
-    mav_putvalue_src2 = 0xe
-    mav_putvalue_src3 = 0x1
+    mav_putvalue_src1 = 0x000125ae
+    mav_putvalue_src2 = 0x00000e47
+    mav_putvalue_src3 = 0x00000000
 
-    insts = [int('', base=2)]
+    rs1 = '000'
+    rs2 = '0000000'
+    rd = '00000'
+
+    opcode = ['0110011', '0010011', '0110011', '0010011', '0110011']
+    func7 = ['0100000']
+    func3 = ['111']
+    ins_str = [func7[0] + rs1 + rs2 + func3[0] + rd + opcode[0]]
+    insts = [int(i, base=2) for i in ins_str]
     #for mav_putvalue_instr in [0x101010B3]:
     for mav_putvalue_instr in insts:
         # expected output from the model
