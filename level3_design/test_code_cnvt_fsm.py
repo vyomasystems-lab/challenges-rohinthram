@@ -15,9 +15,8 @@ async def test_code_cnvt_bug1(dut):
 
 
     #setting different input values
-    inp = [31]*12
-    out = ['00000','00000','00000','00000','00000','10000','01000', '10100', '01010', '10101', '01010', '10101', '01010']*2
-
+    inp = [21]*20
+    out = ['00000']*20
 
     for i in range(len(inp)):
         dut.inp.value = inp[i]

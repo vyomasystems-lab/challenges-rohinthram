@@ -25,8 +25,8 @@ module gray_bin_5bit_fsm(
     
     always @ (posedge clk) begin
     
-        case(state)
-            s0: state <= in ? s2 : s1;
+        casex(state)
+            s0: state <= in ? s1 : s2; // s2:s1
             s1: state <= in ? s4 : s3;
             s2: state <= in ? s3 : s4;
             s3: state <= in ? s6 : s5;
@@ -38,13 +38,13 @@ module gray_bin_5bit_fsm(
             default: state <= s0;
         endcase
         
-        case(state)
+        casex(state)
             s0: out <= in ? 1 : 1; // 1 : 0
             s1: out <= in ? 1 : 0;
             s2: out <= in ? 0 : 1;
             s3: out <= in ? 1 : 0;
             s4: out <= in ? 0 : 1;
-            s5: out <= in ? 1 : 0;
+            s5: out <= in ? 0 : 0; //1:0
             s6: out <= in ? 0 : 1;
             s7: out <= in ? 1 : 0;
             s8: out <= in ? 0 : 1;
