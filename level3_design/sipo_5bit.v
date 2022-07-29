@@ -4,8 +4,6 @@ module sipo_5bit(
     input in, clk,
     output reg [4:0] out
     );
-    
-    initial out = 0;
 
     d_ff u1(in,clk,out[4]);
     d_ff u2(out[4],clk,out[3]);

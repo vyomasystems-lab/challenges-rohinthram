@@ -5,8 +5,6 @@ module piso_5bit(
     input clk, shift,
     output reg out
     );
-    
-    initial out = 0;
 
     wire q1,q2,q3,q4;
     wire w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12;

@@ -31,7 +31,7 @@ module gray_bin_5bit_fsm(
             s2: state <= in ? s3 : s4;
             s3: state <= in ? s6 : s5;
             s4: state <= in ? s5 : s6;
-            s5: state <= in ? s8 : s7;
+            s5: state <= in ? s7 : s8; // s8 : s7
             s6: state <= in ? s7 : s8;
             s7: state <= s0;
             s8: state <= s0;
@@ -39,7 +39,7 @@ module gray_bin_5bit_fsm(
         endcase
         
         case(state)
-            s0: out <= in ? 1 : 0;
+            s0: out <= in ? 1 : 1; // 1 : 0
             s1: out <= in ? 1 : 0;
             s2: out <= in ? 0 : 1;
             s3: out <= in ? 1 : 0;
