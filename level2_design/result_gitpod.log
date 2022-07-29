@@ -1,0 +1,174 @@
+make -f Makefile results.xml
+make[1]: Entering directory '/workspace/challenges-rohinthram/level2_design'
+MODULE=test_mkbitmanip    TESTCASE= TOPLEVEL=mkbitmanip         TOPLEVEL_LANG=verilog \
+         /home/linuxbrew/.linuxbrew/bin/vvp -M /home/gitpod/.pyenv/versions/3.8.10/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:99   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     Running tests with cocotb v1.6.2 from /home/gitpod/.pyenv/versions/3.8.10/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     Seeding Python random module with 1659068193
+     0.00ns WARNING  Pytest not found, assertion rewriting will not occur
+     0.00ns INFO     Found test test_mkbitmanip.run_test
+     0.00ns INFO     running run_test (1/1)
+--ANDN 1
+     0.01ns INFO     DUT OUTPUT=0x80d
+     0.01ns INFO     EXPECTED OUTPUT=0x24351
+--ORN 2
+     0.01ns INFO     DUT OUTPUT=0x1ffffeb7d
+     0.01ns INFO     EXPECTED OUTPUT=0x1ffffeb7d
+--XNOR 3
+     0.01ns INFO     DUT OUTPUT=0x1fffda82d
+     0.01ns INFO     EXPECTED OUTPUT=0x1fffda82d
+--SLO  4
+     0.01ns INFO     DUT OUTPUT=0x125aeff
+     0.01ns INFO     EXPECTED OUTPUT=0x125aeff
+--SRO  5
+     0.01ns INFO     DUT OUTPUT=0x1fc000497
+     0.01ns INFO     EXPECTED OUTPUT=0x1fc000497
+--ROL  6
+     0.02ns INFO     DUT OUTPUT=0x125ae01
+     0.02ns INFO     EXPECTED OUTPUT=0x125ae01
+--ROR  7
+     0.02ns INFO     DUT OUTPUT=0xb8000497
+     0.02ns INFO     EXPECTED OUTPUT=0xb8000497
+--SH1ADD  8
+     0.02ns INFO     DUT OUTPUT=0x4b347
+     0.02ns INFO     EXPECTED OUTPUT=0x4b347
+--SH2ADD  9
+     0.02ns INFO     DUT OUTPUT=0x949ff
+     0.02ns INFO     EXPECTED OUTPUT=0x949ff
+--SH3ADD  10
+     0.02ns INFO     DUT OUTPUT=0x12776f
+     0.02ns INFO     EXPECTED OUTPUT=0x12776f
+--SBCLR   11
+     0.02ns INFO     DUT OUTPUT=0x24a5d
+     0.02ns INFO     EXPECTED OUTPUT=0x24a5d
+--SBSET   12
+     0.02ns INFO     DUT OUTPUT=0x24b5d
+     0.02ns INFO     EXPECTED OUTPUT=0x24b5d
+--SBINV  13
+     0.02ns INFO     DUT OUTPUT=0x24a5d
+     0.02ns INFO     EXPECTED OUTPUT=0x24a5d
+--SBEXT  14
+     0.02ns INFO     DUT OUTPUT=0x3
+     0.02ns INFO     EXPECTED OUTPUT=0x3
+--GORC 15 (check)
+     0.03ns INFO     DUT OUTPUT=0x1ffffff
+     0.03ns INFO     EXPECTED OUTPUT=0x1ffffff
+--GREV  16 (should check)
+     0.03ns INFO     DUT OUTPUT=0x10148eb
+     0.03ns INFO     EXPECTED OUTPUT=0x10148eb
+--CLMUL  32
+     0.03ns INFO     DUT OUTPUT=0x1f7c0f95
+     0.03ns INFO     EXPECTED OUTPUT=0x1f7c0f95
+--CLMULH  33
+     0.03ns INFO     DUT OUTPUT=0x1
+     0.03ns INFO     EXPECTED OUTPUT=0x1
+--CLMULR  34
+     0.03ns INFO     DUT OUTPUT=0x1
+     0.03ns INFO     EXPECTED OUTPUT=0x1
+--MIN  35
+     0.03ns INFO     DUT OUTPUT=0x1c8f
+     0.03ns INFO     EXPECTED OUTPUT=0x1c8f
+--MAX 36
+     0.03ns INFO     DUT OUTPUT=0x24b5d
+     0.03ns INFO     EXPECTED OUTPUT=0x24b5d
+--MINU  37
+     0.03ns INFO     DUT OUTPUT=0x1c8f
+     0.03ns INFO     EXPECTED OUTPUT=0x1c8f
+--MAXU 38
+     0.03ns INFO     DUT OUTPUT=0x24b5d
+     0.03ns INFO     EXPECTED OUTPUT=0x24b5d
+--BDEP 39
+     0.03ns INFO     DUT OUTPUT=0x88d
+     0.03ns INFO     EXPECTED OUTPUT=0x88d
+--BEXT 40
+     0.04ns INFO     DUT OUTPUT=0x4d
+     0.04ns INFO     EXPECTED OUTPUT=0x4d
+--PACK 41
+     0.04ns INFO     DUT OUTPUT=0x1c8e4b5d
+     0.04ns INFO     EXPECTED OUTPUT=0x1c8e4b5d
+--PACKU 42
+     0.04ns INFO     DUT OUTPUT=0x3
+     0.04ns INFO     EXPECTED OUTPUT=0x3
+--PACKH 45
+     0.04ns INFO     DUT OUTPUT=0x8f5d
+     0.04ns INFO     EXPECTED OUTPUT=0x8f5d
+--CLZ   21
+     0.04ns INFO     DUT OUTPUT=0x1f
+     0.04ns INFO     EXPECTED OUTPUT=0x1f
+--CTZ    22
+     0.04ns INFO     DUT OUTPUT=0x3
+     0.04ns INFO     EXPECTED OUTPUT=0x3
+--PCNT   23
+     0.04ns INFO     DUT OUTPUT=0x13
+     0.04ns INFO     EXPECTED OUTPUT=0x13
+--SEXT.B  24
+     0.04ns INFO     DUT OUTPUT=0x1ffffff5d
+     0.04ns INFO     EXPECTED OUTPUT=0x1ffffff5d
+--SEXT.H  25
+     0.04ns INFO     DUT OUTPUT=0x4b5d
+     0.04ns INFO     EXPECTED OUTPUT=0x4b5d
+--CRC32.B 26
+     0.04ns INFO     DUT OUTPUT=0x62dd1f95
+     0.04ns INFO     EXPECTED OUTPUT=0x62dd1f95
+--CRC32.H  27
+     0.04ns INFO     DUT OUTPUT=0xf7008a43
+     0.04ns INFO     EXPECTED OUTPUT=0xf7008a43
+--CRC32.W  28
+     0.05ns INFO     DUT OUTPUT=0x11453b6f9
+     0.05ns INFO     EXPECTED OUTPUT=0x11453b6f9
+--CRC32C.B 29
+     0.05ns INFO     DUT OUTPUT=0x1c661749
+     0.05ns INFO     EXPECTED OUTPUT=0x1c661749
+--CRC32C.H  30
+     0.05ns INFO     DUT OUTPUT=0xcbbe2365
+     0.05ns INFO     EXPECTED OUTPUT=0xcbbe2365
+--CRC32C.W  31
+     0.05ns INFO     DUT OUTPUT=0xfdfbf24f
+     0.05ns INFO     EXPECTED OUTPUT=0xfdfbf24f
+--CMIX  17
+     0.05ns INFO     DUT OUTPUT=0x80d
+     0.05ns INFO     EXPECTED OUTPUT=0x80d
+--CMOV 18
+     0.05ns INFO     DUT OUTPUT=0x24b5d
+     0.05ns INFO     EXPECTED OUTPUT=0x24b5d
+--FSL 19
+     0.05ns INFO     DUT OUTPUT=0x125ae01
+     0.05ns INFO     EXPECTED OUTPUT=0x125ae01
+--FSR  20(check)
+     0.05ns INFO     DUT OUTPUT=0x497
+     0.05ns INFO     EXPECTED OUTPUT=0x497
+--SHFLI  55 (check)
+     0.05ns INFO     DUT OUTPUT=0x24b5d
+     0.05ns INFO     EXPECTED OUTPUT=0x24b5d
+--UNSHFLI  56  (check)
+     0.06ns INFO     DUT OUTPUT=0x24b5d
+     0.06ns INFO     EXPECTED OUTPUT=0x24b5d
+--GORCI 57
+     0.06ns INFO     DUT OUTPUT=0x24b5d
+     0.06ns INFO     EXPECTED OUTPUT=0x24b5d
+--GREVI  58
+     0.06ns INFO     DUT OUTPUT=0x24b5d
+     0.06ns INFO     EXPECTED OUTPUT=0x24b5d
+--_FSRI  59
+     0.06ns INFO     DUT OUTPUT=0x24b5d
+     0.06ns INFO     EXPECTED OUTPUT=0x24b5d
+--BFP  60
+--SLO function
+     0.06ns INFO     DUT OUTPUT=0x21c8f
+     0.06ns INFO     EXPECTED OUTPUT=0x21c8f
+     0.06ns INFO     run_test failed
+                     Traceback (most recent call last):
+                       File "/workspace/challenges-rohinthram/level2_design/test_mkbitmanip.py", line 194, in run_test
+                         assert not cnt, f'Number of Errors : {cnt} for {total}'
+                     AssertionError: Number of Errors : 1 for 49
+     0.06ns INFO     **************************************************************************************
+                     ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                     **************************************************************************************
+                     ** test_mkbitmanip.run_test       FAIL           0.06           0.02          2.67  **
+                     **************************************************************************************
+                     ** TESTS=1 PASS=0 FAIL=1 SKIP=0                  0.06           0.03          1.80  **
+                     **************************************************************************************
+                     
+make[1]: Leaving directory '/workspace/challenges-rohinthram/level2_design'
