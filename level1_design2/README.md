@@ -73,7 +73,7 @@ Updating the design and re-running the test makes the test pass.
 
 ![](../assets/seq_detect_pass.png)
 
-The updated design is checked in as mux_corrected.v
+The updated design is checked in as seq_detect_1011_corrected.v
 
 ## Verification Strategy
 Randomly assign and verify the logic given, check if the design functions as per the design specifications. For example, try 1011 , it gives correct output, now add some more bits 
