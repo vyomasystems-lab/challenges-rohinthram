@@ -25,4 +25,11 @@ The verification and bug details for the designs are provided in the respective 
 
 ---
 
-# Ack
+# Author
+-  R.V.Rohinth Ram
+
+# Acknowledments
+- Lavanya J, CEO/Founder, Vyoma Systems - lavanya@vyomasystems.com
+- Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+- All members those who have directly or indirectly contributed for the hackathon
+
