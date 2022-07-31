@@ -35,6 +35,6 @@ The verification and bug details for the different designs are provided in the r
 # Acknowledments
 - Lavanya J, CEO/Founder, Vyoma Systems - lavanya@vyomasystems.com
 - Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-- All other contributes
+- All other contributors
 
 ---
