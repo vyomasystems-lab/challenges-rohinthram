@@ -1,6 +1,10 @@
-# Design Verification
+# Capture the Bug - A Design Verification Hackathon
 
-The verification of design is done using Vyoma's UpTickPro
+![](/assets/ctb_banner.png)
+ 
+*Final Report* 
+
+The verification of design is done using **Vyoma's UpTickPro**
 
 ![](assets/gitpod_workspace.png)
 
@@ -8,17 +12,17 @@ The verification of design is done using Vyoma's UpTickPro
 
 The verification of the design is done using CoCoTb module which is a Co-routine based Co-simulation Testbench for verifying digital design.
 
-The HDL simulator used here is the `icarus-verilog` and the HDL language is `verilog`
-The following is a sample make file to run the verification on the Device Under Test(DUT).
+The HDL simulator used here is the **icarus-verilog** and the HDL language is **verilog**
+The following is a sample Makefile to run the verification on the Device Under Test (DUT).
 ![](assets/sample_makefile.png)
 
-Running make command gives the test for the module specified, hence we can verify the correctness of the design by passing various test vectors and checking for proper functionality.
+Running make command runs the test for the module specified, hence we can verify the correctness of the design by passing various test vectors by specifying in the python testbench file and checking for proper functionality.
 
-A sample CoCoTb file is as shown
+A sample python script for verification using CoCoTb is as shown
 ![](assets/sample_tb.png)
 
-The verification and bug details for the designs are provided in the respective directories as README.md file
-- [MUX](/level1_design1/README.md)
+The verification and bug details for the different designs are provided in the respective directory's README.md file
+- [Multiplexer](/level1_design1/README.md)
 - [Sequence Detector](/level1_design2/README.md)
 - [Bit Manipulation Co-processor](/level2_design/README.md)
 - [Gray to Binary Code Converter using FSM](/level3_design/README.md)
@@ -31,5 +35,6 @@ The verification and bug details for the designs are provided in the respective 
 # Acknowledments
 - Lavanya J, CEO/Founder, Vyoma Systems - lavanya@vyomasystems.com
 - Kunal Ghosh, Co-founder, VLSI System Design (VSD) Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-- All members those who have directly or indirectly contributed for the hackathon
+- All other contributes
 
+---

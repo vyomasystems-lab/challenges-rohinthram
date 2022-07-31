@@ -3,7 +3,7 @@
 ![](../assets/code_cnvt_1.png)
 
 ## Verification Environment
-The test drives inputs to the Design Under Test using dut.&lt;input-port-name&gt;.value = &lt;value&gt;
+The testbench drives inputs to the Design Under Test using dut.&lt;input-port-name&gt;.value = &lt;value&gt;
 
 The values are assigned to the input port using 
 ```

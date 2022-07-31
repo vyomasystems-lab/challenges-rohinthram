@@ -9,7 +9,7 @@ Various instructions from the instruction set are first made into a list, and ea
 ins_str = [func7[i] + rs2 + rs1 + func3[i] + rd + opcode for i in range(len(func7))]
 ```
 
-The functioning of the Bit Manipulator is invoked from the model_mkbitmanip. The below function call provides the correct functioning of the processor.
+The functioning of the Bit Manipulator is provided by the *model_mkbitmanip.py*. The below function call provides the correct functioning of the processor(taken for granted)
 
 ```
 bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
@@ -22,14 +22,13 @@ mav_putvalue_src2 = 0x00000e47
 mav_putvalue_src3 = 0x00000000
 ```
 
-The test drives inputs to the Design Under Test using dut.&lt;input-port-name&gt;.value = &lt;value&gt;
+The testbench drives inputs to the Design Under Test using dut.&lt;input-port-name&gt;.value = &lt;value&gt;
 
 The values are assigned to the input port, testing all possible instructions
 ![](../assets/bitmanip_2.png)
 
 
-The assert statement is used for comparing the output from the Bit Manipulator processor with the expected value.
-Here, the number of incorrect output is kept track of. This asserts if any error occurred in the whole instruction set.
+The assert statement is used for comparing the output from the Bit Manipulator processor with the expected value. Here, the number of incorrect outputs is kept track of. This asserts that there is no error in the execution of the complete instruction set.
 
 ```
 assert not cnt, f'Number of Errors : {cnt} for {total}'
@@ -52,7 +51,7 @@ Based on log results from the verification setup, we see the following
 The complete log of instrcutions can be found in **result.log**
 
 ## Verification Strategy
- Verify the functionality of the processor by changing input and the instruction. Here the behaviour of the processor is mimicked by the *bitmanip()* from *model_mkbitmanip.py* which we take for granted that the functioning the *bitmanip()* is correct.
+ Change the input and instruction to test the processor's functionality. Here the behaviour of the processor is mimicked by the *bitmanip()* from *model_mkbitmanip.py*, which we assume is correct
 
 ## Is the verification complete ?
- Verification is complete, but there may lot of edge cases for this processor. This is a complex design with a ton of different instructions (32 bit). The functionality may be working for a given test vector but fail for same instruction with different test vector.
+ Verification is complete, but there may be a lot of edge cases for this processor. This is a complex design with a ton of different instructions (32 bit). The functionality may work for a given test vector but fail for the same instruction with a different test vector.
