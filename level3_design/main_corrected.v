@@ -23,6 +23,12 @@ module gray_bin_5bit_fsm(
     
     reg [4:0] state;
     
+    initial begin
+        state = s0;
+        out = 0;
+    end
+
+    
     always @ (posedge clk) begin
     
         case(state)
@@ -50,7 +56,7 @@ module gray_bin_5bit_fsm(
             s8: out <= in ? 0 : 1;
             default: out <= 0;         
         endcase  
-       // $monitor(state, out); 
+        // $display("Input got : %d \t State : %d \t Output : %d", in, state, out); 
     end
     
 endmodule
@@ -105,9 +111,6 @@ module d_ff(
     input d, clk,
     output reg q
     );
-    
-    
-    initial q = 0;
     
     always @ (posedge clk)
         q <= d;
