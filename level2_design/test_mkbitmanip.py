@@ -15,9 +15,9 @@ from model_mkbitmanip import *
 @cocotb.coroutine
 def clock_gen(signal):
     while True:
-        signal.value <= 0
+        signal.value = 0
         yield Timer(1) 
-        signal.value <= 1
+        signal.value = 1
         yield Timer(1) 
 
 # Sample Test
@@ -28,9 +28,9 @@ def run_test(dut):
     cocotb.fork(clock_gen(dut.CLK))
 
     # reset
-    dut.RST_N.value <= 0
+    dut.RST_N.value = 0
     yield Timer(10) 
-    dut.RST_N.value <= 1
+    dut.RST_N.value = 1
 
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
